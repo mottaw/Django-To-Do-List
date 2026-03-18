@@ -1,6 +1,9 @@
 from django.urls import path
-from . import views
+from django.http import HttpResponse
 
-urlspatterns = [
-    path('', views.taskList, name='tasks'),
+def test(request):
+    return HttpResponse("ok")
+
+urlpatterns = [
+    path('', test),
 ]
